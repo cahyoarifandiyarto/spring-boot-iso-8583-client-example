@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<channel-adaptor name='belajar-channel' class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+    <channel class="com.belajar.middleware_iso8583.jpos.channel.BelajarChannel"
+             packager="org.jpos.iso.packager.GenericPackager">
+        <property name="host" value="localhost" />
+        <property name="port" value="8000" />
+        <property name="packager-config" value="cfg/generic-packager.xml" />
+    </channel>
+    <in>belajar-send</in>
+    <out>belajar-receive</out>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>
